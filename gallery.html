@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery — Atena</title>
+  <title>Gallery - Atena</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>" />
   <style>
-    /* Gallery filter buttons */
     .filter-bar {
       display: flex;
       flex-wrap: wrap;
@@ -39,7 +37,7 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">✦ Atena</a>
+  <a href="index.html" class="nav-logo">&#10022; Atena</a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About Me</a></li>
@@ -57,142 +55,83 @@
   <div class="page-hero">
     <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Gallery</div>
     <h1>My <span>Gallery</span></h1>
-    <p>Favourite moments, travels, nature, and the little things that make life beautiful.</p>
+    <p>Photographs that reflect movement, calm, friendship, and the beauty I like to keep close.</p>
   </div>
 
-  <!-- Gallery Section -->
   <section class="section">
     <div class="section-header">
       <div class="section-tag">Photo Collection</div>
       <h2 class="section-title">Moments That <span>Matter</span></h2>
       <div class="section-divider"></div>
-      <p class="section-subtitle">Hover over any photo to see its caption. Click the filters to browse by category.</p>
+      <p class="section-subtitle">A few visual memories from daily life, nature, travel, and the small joys that stay with me.</p>
     </div>
 
-    <!-- Filter Buttons -->
     <div class="filter-bar">
-      <button class="filter-btn active" onclick="filterGallery('all', this)">All ✨</button>
-      <button class="filter-btn" onclick="filterGallery('travel', this)">Travel ✈️</button>
-      <button class="filter-btn" onclick="filterGallery('nature', this)">Nature 🌿</button>
-      <button class="filter-btn" onclick="filterGallery('lifestyle', this)">Lifestyle 🌸</button>
-      <button class="filter-btn" onclick="filterGallery('activities', this)">Activities 🏃</button>
+      <button class="filter-btn active" onclick="filterGallery('all', this)">All</button>
+      <button class="filter-btn" onclick="filterGallery('travel', this)">Travel</button>
+      <button class="filter-btn" onclick="filterGallery('nature', this)">Nature</button>
+      <button class="filter-btn" onclick="filterGallery('lifestyle', this)">Lifestyle</button>
+      <button class="filter-btn" onclick="filterGallery('activities', this)">Activities</button>
     </div>
 
-    <!-- Gallery Grid -->
     <div class="gallery-grid" id="galleryGrid">
-
-      <!-- To add your own photos:
-           1. Place your images inside the images/ folder
-           2. Replace the src="images/gallery1.jpg" with your actual filenames
-           3. Update the alt text and caption text to match each photo
-           The emoji placeholders below show where your photos will go. -->
-
       <div class="gallery-item fade-in" data-category="lifestyle">
-        <img src="images/gallery1.jpg" alt="A peaceful morning"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-        <div class="gallery-placeholder" style="display:none;">
-          ☕ <span>gallery1.jpg</span>
-        </div>
-        <div class="gallery-overlay"><p>A peaceful morning</p></div>
+        <img src="images/gallery1.jpg" alt="Coffee and quiet beginnings" />
+        <div class="gallery-overlay"><p>Coffee and quiet beginnings</p></div>
       </div>
 
       <div class="gallery-item fade-in" data-category="travel">
-        <img src="images/gallery2.jpg" alt="My favourite travel memory"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-        <div class="gallery-placeholder" style="display:none;">
-          ✈️ <span>gallery2.jpg</span>
-        </div>
-        <div class="gallery-overlay"><p>My favourite travel memory</p></div>
+        <img src="images/gallery2.jpg" alt="Roads that stay in the heart" />
+        <div class="gallery-overlay"><p>Roads that stay in the heart</p></div>
       </div>
 
       <div class="gallery-item fade-in" data-category="nature">
-        <img src="images/gallery3.jpg" alt="Nature and calmness"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-        <div class="gallery-placeholder" style="display:none;">
-          🌿 <span>gallery3.jpg</span>
-        </div>
-        <div class="gallery-overlay"><p>Nature and calmness</p></div>
+        <img src="images/gallery3.jpg" alt="Nature, light, and calm" />
+        <div class="gallery-overlay"><p>Nature, light, and calm</p></div>
       </div>
 
       <div class="gallery-item fade-in" data-category="activities">
-        <img src="images/gallery4.jpg" alt="A moment of gratitude"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-        <div class="gallery-placeholder" style="display:none;">
-          🧘 <span>gallery4.jpg</span>
-        </div>
-        <div class="gallery-overlay"><p>A moment of gratitude</p></div>
+        <img src="images/gallery4.jpg" alt="Strength, movement, and balance" />
+        <div class="gallery-overlay"><p>Strength, movement, and balance</p></div>
       </div>
 
       <div class="gallery-item fade-in" data-category="travel">
-        <img src="images/gallery5.jpg" alt="Adventure awaits"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-        <div class="gallery-placeholder" style="display:none;">
-          🗺️ <span>gallery5.jpg</span>
-        </div>
-        <div class="gallery-overlay"><p>Adventure awaits</p></div>
+        <img src="images/gallery5.jpg" alt="Small adventures, lasting memories" />
+        <div class="gallery-overlay"><p>Small adventures, lasting memories</p></div>
       </div>
 
       <div class="gallery-item fade-in" data-category="lifestyle">
-        <img src="images/gallery6.jpg" alt="Simple joys"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-        <div class="gallery-placeholder" style="display:none;">
-          🌸 <span>gallery6.jpg</span>
-        </div>
-        <div class="gallery-overlay"><p>Simple joys</p></div>
+        <img src="images/gallery6.jpg" alt="Simple joys in everyday life" />
+        <div class="gallery-overlay"><p>Simple joys in everyday life</p></div>
       </div>
 
       <div class="gallery-item fade-in" data-category="nature">
-        <img src="images/gallery7.jpg" alt="Golden hour"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-        <div class="gallery-placeholder" style="display:none;">
-          🌅 <span>gallery7.jpg</span>
-        </div>
-        <div class="gallery-overlay"><p>Golden hour</p></div>
+        <img src="images/gallery7.jpg" alt="Golden hour and calm thoughts" />
+        <div class="gallery-overlay"><p>Golden hour and calm thoughts</p></div>
       </div>
 
       <div class="gallery-item fade-in" data-category="activities">
-        <img src="images/gallery8.jpg" alt="Staying active"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-        <div class="gallery-placeholder" style="display:none;">
-          🏃 <span>gallery8.jpg</span>
-        </div>
-        <div class="gallery-overlay"><p>Staying active</p></div>
+        <img src="images/gallery8.jpg" alt="An active moment of reset" />
+        <div class="gallery-overlay"><p>An active moment of reset</p></div>
       </div>
 
       <div class="gallery-item fade-in" data-category="lifestyle">
-        <img src="images/gallery9.jpg" alt="A favourite corner"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-        <div class="gallery-placeholder" style="display:none;">
-          🏡 <span>gallery9.jpg</span>
-        </div>
-        <div class="gallery-overlay"><p>A favourite corner</p></div>
+        <img src="images/gallery9.jpg" alt="A favourite corner to remember" />
+        <div class="gallery-overlay"><p>A favourite corner to remember</p></div>
       </div>
-
     </div>
-
-    <!-- Upload Notice -->
-    <div style="text-align:center; margin-top:50px; padding:32px; background:var(--gradient-soft); border-radius:var(--radius); max-width:580px; margin-left:auto; margin-right:auto;">
-      <div style="font-size:2.2rem; margin-bottom:12px;">📷</div>
-      <h3 style="margin-bottom:10px; color:var(--purple-dark);">Add Your Photos</h3>
-      <p style="color:var(--text-mid); font-size:0.92rem;">
-        Place your image files in the <strong>images/</strong> folder and update the <code>src</code> attributes in this file. Name them <code>gallery1.jpg</code>, <code>gallery2.jpg</code>, etc., or use any names you like.
-      </p>
-    </div>
-
   </section>
 
-  <!-- Quote -->
   <div class="quote-block">
-    <blockquote>"A photograph is a pause button on life — and I love what I find when I press it."</blockquote>
-    <cite>— Atena</cite>
+    <blockquote>"Photography helps me hold on to the warmth of ordinary moments."</blockquote>
+    <cite>- Atena</cite>
   </div>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="footer-logo">Atena <span>✦</span></div>
-        <p>A compassionate nurse, lifelong learner, and someone who believes kindness can change everything.</p>
+        <div class="footer-logo">Atena <span>&#10022;</span></div>
+        <p>A nurse from Qazvin who believes warmth, growth, and kindness can shape a meaningful life.</p>
       </div>
       <div>
         <h4>Navigation</h4>
@@ -213,11 +152,11 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Atena. Made with 💜 and a lot of care.</span>
+      <span>&copy; 2026 Atena. Made with care and warmth.</span>
       <div class="social-links">
-        <a href="mailto:your@email.com" class="social-link">✉️</a>
-        <a href="https://instagram.com/yourusername" target="_blank" class="social-link">📸</a>
-        <a href="https://github.com/yourusername" target="_blank" class="social-link">💻</a>
+        <a href="mailto:atena.abforoush1400@gmail.com" class="social-link" title="Email">&#9993;&#65039;</a>
+        <a href="https://instagram.com/i.atena.96" target="_blank" rel="noreferrer" class="social-link" title="Instagram">&#128247;</a>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/40238044/" target="_blank" rel="noreferrer" class="social-link" title="Publication">&#128214;</a>
       </div>
     </div>
   </footer>
@@ -227,11 +166,9 @@
 <script src="js/main.js"></script>
 <script>
   function filterGallery(category, btn) {
-    // Update active button
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
 
-    // Filter items
     document.querySelectorAll('.gallery-item').forEach(item => {
       if (category === 'all' || item.dataset.category === category) {
         item.classList.remove('hidden');
